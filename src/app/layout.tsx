@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 import Providers from '@/providers/Providers'
-// import SiteHeader from '@/components/site-header'
+import SiteHeader from '@/components/site-header'
 import { Toaster } from '@/components/ui/toaster'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -21,11 +21,11 @@ interface RootLayoutProps {
 const RootLayout: FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={'min-h-screen ' + inter.className} id="root">
         <Providers>
-          <div className="relative flex min-h-screen flex-col">
-            {/* <SiteHeader /> */}
-            <div className="flex-1">{children}</div>
+          <div className="min-h-screen relative flex flex-col">
+            <SiteHeader />
+            {children}
             <Toaster />
           </div>
         </Providers>

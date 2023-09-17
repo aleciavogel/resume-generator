@@ -44,7 +44,7 @@ const FormWizard: React.FC = () => {
 
   return (
     <main className="">
-      <Card className="w-[600px] mx-auto">
+      <Card className="w-[600px] mx-auto mt-12">
         <CardHeader>
           <CardTitle className="text-center">Thanks for your interest!</CardTitle>
           <CardDescription className="text-center">

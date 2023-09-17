@@ -15,7 +15,13 @@ const Home: FC = () => {
   // )
   const { hasSubmitted } = useContext(PackageSettingsContext)
 
-  return <main className="">{hasSubmitted ? <ResumeTemplate /> : <FormWizard />}</main>
+  return (
+    <main className="flex-1 flex flex-row justify-center">
+      <div className="w-full min-w-[600px] h-full flex flex-row justify-center items-center">
+        {hasSubmitted ? <ResumeTemplate /> : <FormWizard />}
+      </div>
+    </main>
+  )
   // return <main className="">{hasSubmitted ? <FormWizard /> : <ResumeTemplate />}</main>
 }
 

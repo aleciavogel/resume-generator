@@ -15,7 +15,7 @@ interface ResumeDocumentProps {
 
 const ResumeDocument: FC<ResumeDocumentProps> = ({ fields }) => {
   return (
-    <Document>
+    <Document title="Alecia Vogel - Resume">
       <ResumeFrontPage />
 
       <ResumePageTwo />
