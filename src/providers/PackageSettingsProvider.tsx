@@ -12,6 +12,7 @@ interface Props {
 // PackageSettingsProvider wrapper component
 const PackageSettingsProvider: FC<Props> = ({ children }) => {
   const [fields, setFields] = useState<Partial<InquiryFields>>({})
+  const [hasSubmitted, setHasSubmitted] = useState<boolean>(false)
 
   const updateFields = (newValues: Partial<InquiryFields>): void => {
     setFields((oldValues) => {
@@ -22,11 +23,17 @@ const PackageSettingsProvider: FC<Props> = ({ children }) => {
     })
   }
 
+  const updateSubmissionStatus = (hasSubmitted: boolean): void => {
+    setHasSubmitted(hasSubmitted)
+  }
+
   return (
     <PackageSettingsContext.Provider
       value={{
         fields,
         updateFields,
+        hasSubmitted,
+        updateSubmissionStatus,
       }}
     >
       {children}

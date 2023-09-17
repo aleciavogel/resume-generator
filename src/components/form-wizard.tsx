@@ -10,6 +10,7 @@ import { Form } from '@/components/ui/form'
 import { FormSchema } from '@/types/form'
 import FormStepOne from './form/step-1'
 import FormStepTwo from './form/step-2'
+import PackageSettingsContext from '@/contexts/PackageSettingsContext'
 
 const FormWizard: React.FC = () => {
   const form = useForm<z.infer<typeof FormSchema>>({
@@ -24,12 +25,9 @@ const FormWizard: React.FC = () => {
       jobPostLink: '',
     },
   })
+  const { updateSubmissionStatus } = React.useContext(PackageSettingsContext)
 
   const [step, setStep] = React.useState(0)
-
-  // const goToStep = (step: number): void => {
-  //   setStep(step)
-  // }
 
   const nextStep = (): void => {
     setStep(step + 1)
@@ -41,6 +39,7 @@ const FormWizard: React.FC = () => {
 
   const handleSubmit = (): void => {
     console.log('submit')
+    updateSubmissionStatus(true)
   }
 
   return (
