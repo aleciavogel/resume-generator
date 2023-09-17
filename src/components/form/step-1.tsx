@@ -52,7 +52,7 @@ const FormStepOne: React.FC<FormStepOneProps> = ({ onContinue, form }) => {
           name="name"
           render={({ field }) => (
             <FormItem className="ohnohoney">
-              <FormLabel>Name</FormLabel>
+              <FormLabel>If you&apos;re human, don&apos;t fill this in</FormLabel>
               <FormControl>
                 <Input autoComplete="off" {...field} />
               </FormControl>
@@ -65,7 +65,7 @@ const FormStepOne: React.FC<FormStepOneProps> = ({ onContinue, form }) => {
           name="email"
           render={({ field }) => (
             <FormItem className="ohnohoney">
-              <FormLabel>Email</FormLabel>
+              <FormLabel>Don&apos; fill this field in either</FormLabel>
               <FormControl>
                 <Input autoComplete="off" {...field} />
               </FormControl>

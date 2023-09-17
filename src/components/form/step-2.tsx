@@ -18,6 +18,7 @@ import { Input } from '@/components/ui/input'
 import YesNoField from './fields/yes-no-field'
 import type { FormSchema } from '@/types/form'
 import PackageSettingsContext from '@/contexts/PackageSettingsContext'
+import { saveFormSubmission } from '@/db/form'
 
 interface FormStepTwoProps {
   form: ReturnType<typeof useForm<z.infer<typeof FormSchema>>>
@@ -32,8 +33,21 @@ const FormStepTwo: React.FC<FormStepTwoProps> = ({ onNext, onPrev, form }) => {
     onPrev()
   }
 
-  function handleSubmit(data: FieldValues): void {
+  const handleSubmit = async (data: FieldValues): Promise<void> => {
     updateFields({
+      isGeneralPosition: data.isGeneralPosition === 'true',
+      position: data.position,
+      company: data.company,
+      team: data.team,
+      jobPostLink: data.jobPostLink,
+    })
+
+    await saveFormSubmission({
+      name: data.dfkjgh ?? '',
+      email: data.bvmgfk ?? '',
+      role: data.role,
+      otherRole: data.otherRole,
+      isAgencyRecruiter: data.isAgencyRecruiter === 'true',
       isGeneralPosition: data.isGeneralPosition === 'true',
       position: data.position,
       company: data.company,
@@ -152,9 +166,9 @@ const FormStepTwo: React.FC<FormStepTwoProps> = ({ onNext, onPrev, form }) => {
               .catch((err) => {
                 console.log('error:', err)
               })
-              .then(() => {
+              .then(async () => {
                 if (form.formState.isValid) {
-                  handleSubmit(form.getValues())
+                  await handleSubmit(form.getValues())
                 }
               })
           }}
