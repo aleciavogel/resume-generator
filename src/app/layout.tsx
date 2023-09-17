@@ -6,12 +6,12 @@ import { Inter } from 'next/font/google'
 import Providers from '@/providers/Providers'
 import SiteHeader from '@/components/site-header'
 import { Toaster } from '@/components/ui/toaster'
-import BugReportLink from '@/components/bug-report'
+// import BugReportLink from '@/components/bug-report'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Resume Generator',
+  title: 'Resume Generator | Alecia Vogel',
   description: "Download a personalized version of Alecia Vogel's resume",
 }
 
@@ -27,7 +27,7 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => {
           <div className="min-h-screen relative flex flex-col">
             <SiteHeader />
             {children}
-            <BugReportLink />
+            {/* <BugReportLink /> */}
             <Toaster />
           </div>
         </Providers>
