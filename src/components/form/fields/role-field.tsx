@@ -9,7 +9,7 @@ import {
 
 interface RoleFieldProps {
   onValueChange: (value: string) => void
-  defaultValue: string
+  defaultValue?: string
 }
 
 const RoleField: React.FC<RoleFieldProps> = (props) => {
