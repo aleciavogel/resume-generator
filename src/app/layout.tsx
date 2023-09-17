@@ -6,6 +6,7 @@ import { Inter } from 'next/font/google'
 import Providers from '@/providers/Providers'
 import SiteHeader from '@/components/site-header'
 import { Toaster } from '@/components/ui/toaster'
+import BugReportLink from '@/components/bug-report'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,6 +27,7 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => {
           <div className="min-h-screen relative flex flex-col">
             <SiteHeader />
             {children}
+            <BugReportLink />
             <Toaster />
           </div>
         </Providers>

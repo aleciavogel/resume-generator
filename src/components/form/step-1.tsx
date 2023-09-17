@@ -20,11 +20,15 @@ interface FormStepOneProps {
 
 const FormStepOne: React.FC<FormStepOneProps> = ({ onContinue, form }) => {
   const { updateFields } = React.useContext(PackageSettingsContext)
+  const botDetected = React.useMemo(() => {
+    console.log('formstate', form.formState.errors.name, form.formState.errors.email)
+    return form.formState.errors.name !== undefined || form.formState.errors.email !== undefined
+  }, [form.formState.errors.name, form.formState.errors.email])
 
   function handleContinue(data: FieldValues): void {
     updateFields({
-      name: data.name,
-      email: data.email,
+      name: data.dfkjgh,
+      email: data.bvmgfk,
       role: data.role,
       otherRole: data.otherRole,
       isAgencyRecruiter: data.isAgencyRecruiter === 'true',
@@ -32,13 +36,48 @@ const FormStepOne: React.FC<FormStepOneProps> = ({ onContinue, form }) => {
     onContinue()
   }
 
+  if (botDetected) {
+    return (
+      <div className="text-lg font-bold text-red-600 p-6 text-center">
+        Sorry, no bots allowed 😳
+      </div>
+    )
+  }
+
   return (
     <>
       <CardContent className="space-y-4">
+        <FormField
+          control={form.control}
+          name="name"
+          render={({ field }) => (
+            <FormItem className="ohnohoney">
+              <FormLabel>Name</FormLabel>
+              <FormControl>
+                <Input autoComplete="off" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="email"
+          render={({ field }) => (
+            <FormItem className="ohnohoney">
+              <FormLabel>Email</FormLabel>
+              <FormControl>
+                <Input autoComplete="off" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
         <div className="flex flex-row space-x-4">
           <FormField
             control={form.control}
-            name="name"
+            name="dfkjgh"
             render={({ field }) => (
               <FormItem className="w-1/2">
                 <FormLabel>Name</FormLabel>
@@ -52,7 +91,7 @@ const FormStepOne: React.FC<FormStepOneProps> = ({ onContinue, form }) => {
 
           <FormField
             control={form.control}
-            name="email"
+            name="bvmgfk"
             render={({ field }) => (
               <FormItem className="w-1/2">
                 <FormLabel>Email</FormLabel>

@@ -16,6 +16,8 @@ const FormWizard: React.FC = () => {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
+      dfkjgh: '',
+      bvmgfk: '',
       name: '',
       email: '',
       otherRole: '',
@@ -38,7 +40,6 @@ const FormWizard: React.FC = () => {
   }
 
   const handleSubmit = (): void => {
-    console.log('submit')
     updateSubmissionStatus(true)
   }
 
@@ -49,6 +50,8 @@ const FormWizard: React.FC = () => {
           <CardTitle className="text-center">Thanks for your interest!</CardTitle>
           <CardDescription className="text-center">
             Before you can download my resume, I&apos;d like to grab some info from ya.
+            <br />
+            Don&apos;t worry &mdash; there&apos;s no spam or newsletters involved.
           </CardDescription>
         </CardHeader>
         <Form {...form}>

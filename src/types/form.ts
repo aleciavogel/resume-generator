@@ -1,3 +1,4 @@
+import { faLacrosseStick } from '@fortawesome/pro-regular-svg-icons'
 import * as z from 'zod'
 
 export interface InquiryFields {
@@ -15,8 +16,10 @@ export interface InquiryFields {
 
 export const FormSchema = z
   .object({
-    name: z.string().nonempty('Please enter your name.'),
-    email: z.string().email(),
+    dfkjgh: z.string().nonempty('Please enter your name.'), // real name
+    bvmgfk: z.string().email(), // real email
+    name: z.string().optional(), // fake name (honeypot)
+    email: z.string().optional(), // fake email (honeypot)
     role: z.enum(['recruiter', 'manager', 'client', 'curious', 'other']),
     otherRole: z.string().optional(),
     isAgencyRecruiter: z.enum(['true', 'false']).optional(),
@@ -64,5 +67,31 @@ export const FormSchema = z
     {
       message: 'Please enter the name of the position.',
       path: ['position'],
+    },
+  )
+  .refine(
+    (data) => {
+      if (data.name !== undefined && data.name.length > 0) {
+        return faLacrosseStick
+      }
+
+      return true
+    },
+    {
+      message: 'Sorry, no bots allowed!',
+      path: ['name'],
+    },
+  )
+  .refine(
+    (data) => {
+      if (data.email !== undefined && data.email.length > 0) {
+        return faLacrosseStick
+      }
+
+      return true
+    },
+    {
+      message: 'Sorry, no bots allowed!',
+      path: ['email'],
     },
   )
