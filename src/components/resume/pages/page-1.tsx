@@ -12,7 +12,7 @@ const IMG_WIDTH = 580
 
 const ResumeFrontPage: FC = () => {
   return (
-    <Page size="A4" style={styles.frontPage}>
+    <Page wrap size="A4" style={styles.frontPage}>
       <View style={{ position: 'absolute', bottom: 0, right: -170 }}>
         <Image src="/alecia_duotone.png" style={{ zIndex: 1, marginTop: -3, width: IMG_WIDTH }} />
       </View>
