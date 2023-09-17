@@ -10,7 +10,8 @@ import ResumeTemplate from '@/components/resume/ResumeTemplate'
 const Home: FC = () => {
   const { hasSubmitted } = useContext(PackageSettingsContext)
 
-  return <main className="">{hasSubmitted ? <ResumeTemplate /> : <FormWizard />}</main>
+  // return <main className="">{hasSubmitted ? <ResumeTemplate /> : <FormWizard />}</main>
+  return <main className="">{hasSubmitted ? <FormWizard /> : <ResumeTemplate />}</main>
 }
 
 export default Home

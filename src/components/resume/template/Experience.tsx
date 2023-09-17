@@ -28,25 +28,35 @@ const Experience: FC<ExperienceItem> = ({
         <Text style={tw('text-xs leading-snug')}>{dateRange}</Text>
         {skills?.length !== undefined && skills?.length > 0 && (
           <View style={tw('mt-2')}>
-            <Text style={[tw('text-xs leading-snug'), styles.fontBold, { color: COLORS.indigo }]}>
+            <Text
+              style={{
+                ...tw('text-xs leading-snug'),
+                ...styles.fontBold,
+                ...{ color: COLORS.indigo },
+              }}
+            >
               Skills
             </Text>
-            <Text style={[tw('text-xs leading-snug'), styles.textGray]}>{skills?.join(', ')}</Text>
+            <Text style={{ ...tw('text-xs leading-snug'), ...styles.textGray }}>
+              {skills?.join(', ')}
+            </Text>
           </View>
         )}
       </View>
 
       <View style={tw('w-3/4 pl-2')}>
-        <Text style={[tw('leading-snug'), styles.textSmol, styles.fontBold]}>{title}</Text>
+        <Text style={{ ...tw('leading-snug'), ...styles.textSmol, ...styles.fontBold }}>
+          {title}
+        </Text>
 
-        <View style={[styles.textGray]}>
+        <View style={styles.textGray}>
           {description.map((desc, index) => (
             <View
               wrap={false}
-              style={[styles.bulletPoint, tw('text-sm mb-2')]}
+              style={{ ...styles.bulletPoint, ...tw('text-sm mb-2') }}
               key={`desc-${encodeURIComponent(company)}-${index}`}
             >
-              <Text style={[styles.bulletIcon, { width: 10 }]}>&#x2022;</Text>
+              <Text style={{ ...styles.bulletIcon, ...{ width: 10 } }}>&#x2022;</Text>
               <Text style={styles.bulletText}>
                 {desc}
                 <Text>{'\n'}</Text>

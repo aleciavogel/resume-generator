@@ -12,7 +12,7 @@ export const COLORS = {
 
 export const tw = createTw({
   theme: {
-    fontFamily: ['Helvetica', 'Helvetica-Bold', 'Times-Roman'],
+    // fontFamily: ['Helvetica', 'Helvetica-Bold', 'Times-Roman'],
     extend: {
       colors: {
         custom: '#bada55',

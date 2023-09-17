@@ -7,7 +7,7 @@ import SkillsTable from './SkillsTable'
 
 const SkillsSection: FC = () => {
   return (
-    <View style={[styles.section, { paddingBottom: 20 }]}>
+    <View style={{ ...styles.section, ...{ paddingBottom: 20 } }}>
       <Text style={tw('text-base mt-2 mb-2')}>Skill Summary</Text>
       <View style={tw('flex flex-row')}>
         <View style={tw('flex flex-row flex-wrap w-2/3 mr-2')}>
