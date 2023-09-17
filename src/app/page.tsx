@@ -5,7 +5,7 @@ import type { FC } from 'react'
 
 // import FormWizard from '@/components/form-wizard'
 // import PackageSettingsContext from '@/contexts/PackageSettingsContext'
-import ResumeTemplate from '@/components/resume/ResumeTemplate'
+import ResumeTemplate from '@/components/resume'
 
 const Home: FC = () => {
   return (
