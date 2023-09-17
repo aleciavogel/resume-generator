@@ -72,7 +72,7 @@ const ResumeFrontPage: FC = () => {
             Python, and PHP.
           </Text>
           <Text style={tw('text-white text-base mb-2')}>
-            &#x2022; Experience with cutting-edge tech like {'\n'}
+            &#x2022; Experience with cutting-edge tech such as {'\n'}
             NextJS, Supabase, Firebase, and Electron.
           </Text>
           <Text style={tw('text-white text-base')}>
