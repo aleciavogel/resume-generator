@@ -152,9 +152,18 @@ const ResumeFrontPage: FC = () => {
         </Link>
       </View>
 
-      <View style={{ ...tw('absolute bottom-2 text-white text-xs'), ...{ right: 10 } }}>
-        <Text style={{ fontFamily: 'Helvetica-Oblique' }}>
-          *This resume was built with ReactJS and TailwindCSS!
+      <View style={{ ...tw('absolute bottom-2 text-white text-right text-xs'), ...{ right: 10 } }}>
+        <Text>
+          <Link
+            src="https://github.com/aleciavogel/resume-generator"
+            style={{
+              ...{ fontFamily: 'Helvetica-Oblique' },
+              ...tw('text-white text-right no-underline'),
+            }}
+          >
+            *This resume was built with ReactJS and TailwindCSS!{'\n'}
+            Click here to check out the code on my GitHub.
+          </Link>
         </Text>
       </View>
     </Page>
