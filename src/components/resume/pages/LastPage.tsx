@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useMemo } from 'react'
 import type { FC } from 'react'
 import { Page, View, Text, Link } from '@react-pdf/renderer'
 
@@ -8,8 +8,14 @@ import { endNote, startNote } from '../utils'
 
 const ResumeLastPage: FC = () => {
   const { fields } = useContext(PackageSettingsContext)
-  const startingNote = startNote({ company: fields.company, isRecruiter: fields.isAgencyRecruiter })
-  const endingNote = endNote({ company: fields.company, role: fields.role, team: fields.team })
+  const startingNote = useMemo(
+    () => startNote({ company: fields.company, isRecruiter: fields.isAgencyRecruiter }),
+    [fields.company, fields.isAgencyRecruiter],
+  )
+  const endingNote = useMemo(
+    () => endNote({ company: fields.company, role: fields.role, team: fields.team }),
+    [fields.company, fields.role, fields.team],
+  )
 
   return (
     <Page size="A4" style={{ ...styles.frontPage, ...{ padding: '100px 50px 0px' } }}>

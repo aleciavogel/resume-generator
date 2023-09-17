@@ -27,7 +27,7 @@ Font.registerHyphenationCallback((word) => [word])
 
 const ResumeTemplate: FC = () => {
   return (
-    <PDFViewer width="600px" height="800px">
+    <PDFViewer width="600px" height="800px" className="mx-auto">
       <Document>
         <ResumeFrontPage />
 

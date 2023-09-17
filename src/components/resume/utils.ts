@@ -25,9 +25,9 @@ export const startNote = ({
 }
 
 export const endNote = ({ role, team, company }: IEndNote): string => {
-  const hasTeam = team !== undefined && team.length > 0
-  const hasRole = role !== undefined && role.length > 0
-  const hasCompany = company !== undefined && company.length > 0
+  const hasTeam = team !== undefined
+  const hasRole = role !== undefined
+  const hasCompany = company !== undefined
 
   if (hasTeam && hasRole) {
     return `Ready to delve deeper into how I can contribute to the ${team} team as their new ${role}?`
