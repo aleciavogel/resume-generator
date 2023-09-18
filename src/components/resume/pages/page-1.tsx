@@ -67,19 +67,28 @@ const ResumeFrontPage: FC = () => {
             Key Skills
           </Text>
 
-          <Text style={tw('text-white text-base mb-2')}>
-            &#x2022; Strong proficiency in TypeScript, ReactJS*, {'\n'}
-            Python, and PHP.
-          </Text>
-          <Text style={tw('text-white text-base mb-2')}>
-            &#x2022; Experience with cutting-edge tech such as {'\n'}
-            NextJS, Supabase, Firebase, and Electron.
-          </Text>
-          <Text style={tw('text-white text-base')}>
-            &#x2022; Proven ability to lead front-end projects, {'\n'}
-            including AI-powered features and {'\n'}
-            data-driven dashboards.
-          </Text>
+          <View style={tw('flex flex-row text-white text-base mb-2')}>
+            <Text style={tw('mr-2')}>&#x2022;</Text>
+            <Text>
+              Strong proficiency in TypeScript, ReactJS*, {'\n'}
+              Python, and PHP.
+            </Text>
+          </View>
+          <View style={tw('flex flex-row text-white text-base mb-2')}>
+            <Text style={tw('mr-2')}>&#x2022;</Text>
+            <Text>
+              Experience with cutting-edge tech such as {'\n'}
+              NextJS, Supabase, Firebase, and Electron.
+            </Text>
+          </View>
+          <View style={tw('flex flex-row text-white text-base')}>
+            <Text style={tw('mr-2')}>&#x2022;</Text>
+            <Text>
+              Proven ability to lead front-end projects, {'\n'}
+              including AI-powered features and {'\n'}
+              data-driven dashboards.
+            </Text>
+          </View>
         </View>
 
         <View style={{ ...tw('mt-8'), ...{ width: 400 } }}>
