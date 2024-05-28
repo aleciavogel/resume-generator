@@ -4,13 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload } from '@fortawesome/pro-regular-svg-icons'
 
 import ResumeDocument from './pages'
-import type { InquiryFields } from '@/types/form'
 
-interface ResumeDownloadButtonProps {
-  fields: Partial<InquiryFields>
-}
-
-const ResumeDownloadButton: FC<ResumeDownloadButtonProps> = ({ fields }) => {
+const ResumeDownloadButton: FC = () => {
   const currentDate = new Date()
   // format date as YYYY-MM-DD
   const formattedDate = `${currentDate.getFullYear()}-${
@@ -20,7 +15,7 @@ const ResumeDownloadButton: FC<ResumeDownloadButtonProps> = ({ fields }) => {
   return (
     <div className="mx-auto mt-6 text-center uppercase text-xs font-bold tracking-relaxed">
       <PDFDownloadLink
-        document={<ResumeDocument fields={fields} />}
+        document={<ResumeDocument />}
         fileName={`Alecia Vogel - Resume (${formattedDate}).pdf`}
         className=""
       >

@@ -9,7 +9,7 @@ interface SkillItemProps {
 
 const SkillItem: FC<SkillItemProps> = ({ skill, items }) => {
   return (
-    <View style={tw('w-1/2 mb-3 pr-8')}>
+    <View style={tw('w-1/3 mb-3 pr-8')}>
       <Text
         style={{
           ...tw('text-xs leading-snug'),

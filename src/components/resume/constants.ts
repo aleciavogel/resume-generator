@@ -114,6 +114,34 @@ export const styles = StyleSheet.create({
 
 export const WORK_EXPERIENCES: ExperienceItem[] = [
   {
+    title: 'Senior Full Stack Developer',
+    company: 'Playable',
+    location: 'Sydney, NSW [Remote]',
+    dateRange: 'Oct 2023 - Present',
+    description: [
+      'Developed a Turborepo app that generates mobile app prototypes for iOS and Android, facilitating client demonstrations and feedback.',
+      'Led the transition of legacy products from jQuery and Python 2 to modern technologies like ReactJS and Node, ensuring industry-standard practices and future-proofing applications.',
+      'Established and maintained a robust continuous integration (CI) workflow, enhancing development efficiency and reliability.',
+      'Automated the development environment setup, eliminating the need for deployments to see changes and significantly improving developer productivity.',
+      'Developed and published a GitHub Action to deploy Turborepo Next.js apps to Google App Engine, contributing to the open-source community and streamlining deployment processes.',
+      'Initiated the consolidation of multiple apps into a monorepo, including the addition of Storybook for ReactJS component documentation and several new JavaScript packages for features and components shared between apps.',
+      'Mentored junior team members, providing guidance and support in their professional development.',
+    ],
+    skills: [
+      'TypeScript',
+      'ReactJS',
+      'TurboRepo',
+      'Python',
+      'NodeJS',
+      'Docker',
+      'GitHub Actions',
+      'Google App Engine',
+      'Google Cloud',
+      'Amazon Web Services',
+      'Git',
+    ],
+  },
+  {
     title: 'Senior Software Developer (LX)',
     company: 'Onlea',
     location: 'Edmonton, AB [Remote]',
@@ -124,7 +152,6 @@ export const WORK_EXPERIENCES: ExperienceItem[] = [
       'Conducted client-facing demos and presentations, simplifying intricate software functionalities to ensure client understanding and promote effective usage.',
       "Co-led Onlea's first Google Design Sprint, resulting in a rapid prototype for an enhanced internal QA process.",
       'Experimented with photogrammetry techniques to bring cultural education to life in an e-learning setting. Captured multiple-angle photographs of a Métis artefact and successfully converted it into an interactive 3D model.',
-      'Engineered a custom Docker development environment specifically tailored for the creation of bespoke Moodle plugins, incorporating Behat and PHPUnit for robust unit testing.',
     ],
     skills: [
       'PHP',
@@ -151,6 +178,9 @@ export const WORK_EXPERIENCES: ExperienceItem[] = [
     ],
     skills: ['TypeScript', 'NodeJS', 'ReactJS', 'Firebase', 'Git'],
   },
+]
+
+export const WORK_EXPERIENCES_CONTINUED: ExperienceItem[] = [
   {
     title: 'Software Developer (Data Science)',
     company: 'Cybera',
@@ -177,9 +207,6 @@ export const WORK_EXPERIENCES: ExperienceItem[] = [
       'Git',
     ],
   },
-]
-
-export const WORK_EXPERIENCES_CONTINUED: ExperienceItem[] = [
   {
     title: 'Full Stack Rails Developer',
     company: 'Yardstick Assessment Strategies',
@@ -188,7 +215,7 @@ export const WORK_EXPERIENCES_CONTINUED: ExperienceItem[] = [
     description: [
       "Maintained and improved Yardstick's high-stakes exam administration platform, Measure. Fixed a critical bug in the Measure platform that was causing a weekly crash of the production server due to the report generation feature.",
       'Refactored and redesigned the Proctor Portal interface to improve usability, accessibility, and overall efficiency of exam marking and scheduling.',
-      "Led the creation of Yardstick's API documentation website, delving deep into the Ruby on Rails codebase to enumerate and detail all API endpoints, properties, and headers. Employed the Slate framework with Markdown for structure and design, and leveraged Postman for endpoint validation, ensuring robust and accessible documentation.",
+      "Led the creation of Yardstick's API documentation website, detailing all API endpoints, properties, and headers. Employed the Slate framework with Markdown for structure and design, and leveraged Postman for endpoint validation, ensuring robust and accessible documentation.",
     ],
     skills: [
       'Ruby on Rails',
@@ -222,26 +249,25 @@ export const WORK_EXPERIENCES_CONTINUED: ExperienceItem[] = [
     description: [
       'Built feature-rich client websites from scratch, leveraging HTML, CSS, JavaScript, PHP, and various web development frameworks to deliver high-quality, scalable solutions. Managed and created bespoke WordPress themes and plugins, catering to unique client requirements and enhancing site functionality.',
       'Authored cross-platform code to ensure seamless user experiences across diverse web browsers and devices, optimizing performance and accessibility.',
-      'Received Photoshop design mockups and meticulously translated them into fully functional, custom WordPress themes, ensuring high fidelity to the original visual design.',
-      'Collaborated with clients to refine website specifications and requirements, delivering tailored solutions that aligned with business objectives.',
+      'Meticulously translated PhotoShop design mock-ups into fully functional, custom WordPress themes, ensuring high fidelity to the original visual design.',
       "Authored one of SOS Media Corp's most-read blog articles, detailing the nuances of 'reactive,' 'responsive,' and 'interactive' design. Enhanced the article with custom JavaScript for interactive, browser-based learning, contributing to its high-traffic status and demonstrating my skills in technical writing and web development.",
     ],
     skills: ['WordPress', 'JavaScript', 'PHP', 'MySQL', 'Git'],
   },
+]
+
+export const LAST_WORK_EXPERIENCE = [
   {
     title: 'Continuing Education Instructor (Game Design Camp)',
     company: 'Red Deer College',
     location: 'Red Deer, AB',
     dateRange: 'Jul 2016',
     description: [
-      'Stepped in to redesign the entire Video Game Design camp curriculum within a week, transitioning from Project Spark to Unity 3D due to unexpected discontinuation of the former platform.',
+      'Transitioned the camp curriculum from Project Spark to Unity 3D.',
       'Delivered a comprehensive educational experience, teaching computer programming fundamentals in C# including algorithms and data structures. Topics covered ranged from game design, story and character development, to advanced programming techniques like procedural generation.',
     ],
     skills: ['Curriculum Development', 'Unity 3D', 'C#', 'Team Collaboration'],
   },
-]
-
-export const LAST_WORK_EXPERIENCE = [
   {
     title: 'Youth Technology Instructor',
     company: 'University of Lethbridge',
@@ -249,7 +275,7 @@ export const LAST_WORK_EXPERIENCE = [
     dateRange: 'Jun 2015 - Aug 2015',
     description: [
       'Developed a one-of-a-kind, five-camp curriculum that empowered young minds to dive into robotics, microcomputers, and software development. Platforms leveraged include LEGO MindStorms and MinecraftEDU.',
-      'Orchestrated a series of interactive lessons and games in computer science fundamentals, utilizing tools like MIT Scratch, Sonic Pi, and Python to make learning not just educational but also fun!',
+      'Orchestrated a series of interactive lessons and games in computer science fundamentals, utilizing tools like MIT Scratch, Sonic Pi, and Python.',
     ],
     skills: ['Curriculum Design', 'Robotics', 'MinecraftEDU', 'MIT Scratch', 'Python', 'Ruby'],
   },
@@ -293,40 +319,31 @@ export const OTHER_WORK_EXPERIENCE = [
   },
 ]
 
-export const SKILLS_EXPERIENCE = [
-  {
-    title: 'Ruby on Rails',
-    exp: '8 years',
-  },
-  {
-    title: 'Postgres',
-    exp: '8 years',
-  },
-  {
-    title: 'Python',
-    exp: '8 years',
-  },
-  {
-    title: 'ReactJS',
-    exp: '7 years',
-  },
-  {
-    title: 'NodeJS',
-    exp: '5 years',
-  },
-  {
-    title: 'TypeScript',
-    exp: '3 years',
-  },
-]
-
 export const SKILLS: Skills = {
   'Programming Languages': ['TypeScript', 'JavaScript', 'Ruby', 'Python', 'Elixir', 'PHP'],
-  Tools: ['Git', 'NPM', 'Yarn', 'Docker'],
+  Tools: [
+    'Git',
+    'NPM',
+    'Yarn',
+    'Docker',
+    'Doppler',
+    'GitHub Actions',
+    'Jest',
+    'Cypress',
+    'Storybook',
+  ],
   'Frontend Frameworks': ['ReactJS', 'React Native', 'NextJS', 'GatsbyJS', 'ThreeJS'],
-  Databases: ['Supabase', 'PostgreSQL', 'Firebase', 'Neo4J', 'MySQL', 'GraphQL'],
-  'Full Stack Frameworks': ['Ruby on Rails', 'CapacitorJS', 'Electron', 'Phoenix', 'Express'],
+  Databases: [
+    'Supabase',
+    'PostgreSQL',
+    'Firebase',
+    'Neo4J',
+    'MySQL',
+    'GraphQL',
+    'Google Datastore',
+  ],
   Design: ['Figma', 'Sketch', 'InDesign', 'Photoshop', 'Illustrator'],
+  'Full Stack Frameworks': ['Ruby on Rails', 'CapacitorJS', 'Electron', 'Phoenix', 'Express'],
 }
 
 export const VOLUNTEERING = [
