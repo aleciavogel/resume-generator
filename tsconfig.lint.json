@@ -29,7 +29,7 @@
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "src",
-    "bin"
+    ".eslintrc.mjs"
   ],
   "exclude": [
     "node_modules"

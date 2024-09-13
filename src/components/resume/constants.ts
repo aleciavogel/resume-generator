@@ -117,7 +117,7 @@ export const WORK_EXPERIENCES: ExperienceItem[] = [
     title: 'Senior Full Stack Developer',
     company: 'Playable',
     location: 'Sydney, NSW [Remote]',
-    dateRange: 'Oct 2023 - Present',
+    dateRange: 'Oct 2023 - July 2024',
     description: [
       'Developed a Turborepo app that generates mobile app prototypes for iOS and Android, facilitating client demonstrations and feedback.',
       'Led the transition of legacy products from jQuery and Python 2 to modern technologies like ReactJS and Node, ensuring industry-standard practices and future-proofing applications.',

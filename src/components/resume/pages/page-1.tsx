@@ -14,7 +14,7 @@ const ResumeFrontPage: FC = () => {
   return (
     <Page wrap size="A4" style={styles.frontPage}>
       <View style={{ position: 'absolute', bottom: 0, right: -170 }}>
-        <Image src="/alecia_duotone.png" style={{ zIndex: 1, marginTop: -3, width: IMG_WIDTH }} />
+        <Image src="/alecia_duotone2024.png" style={{ zIndex: 1, marginTop: -3, width: IMG_WIDTH }} />
       </View>
 
       <View style={tw('w-full')}>

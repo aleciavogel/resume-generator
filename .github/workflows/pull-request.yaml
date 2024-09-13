@@ -1,0 +1,22 @@
+name: 🔄 Pull Request
+on:
+  pull_request:
+
+jobs:
+  call-workflow-depcheck:
+    if: ${{ github.actor != 'dependabot[bot]' && github.actor != 'renovate[bot]'}}
+    name: 🔍🔗 Check Dependencies
+    uses: ./.github/workflows/depcheck.yaml
+  call-workflow-lint:
+    if: ${{ github.actor != 'dependabot[bot]' && github.actor != 'renovate[bot]'}}
+    name: 🧹 Linting
+    uses: ./.github/workflows/lint.yaml
+    secrets:
+      token: ${{ secrets.github_token }}
+  call-workflow-test:
+    if: ${{ github.actor != 'dependabot[bot]' && github.actor != 'renovate[bot]'}}
+    name: 🧪 Testing
+    uses: ./.github/workflows/test.yaml
+    secrets:
+      token: ${{ secrets.CODECOV_TOKEN }}
+      rootpass: ${{ secrets.ROOTPASSWORD }}

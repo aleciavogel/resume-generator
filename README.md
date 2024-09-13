@@ -4,9 +4,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 This app also uses:
 
-* [React-pdf](https://react-pdf.org/) to build the PDF
-* [tailwindCSS](https://tailwindcss.com) for styling
-* [shadcn-ui](https://ui.shadcn.com/docs) for base components (which will later be used in the form I'm building for PDF personalization and analytics)
+- [React-pdf](https://react-pdf.org/) to build the PDF
+- [tailwindCSS](https://tailwindcss.com) for styling
+- [shadcn-ui](https://ui.shadcn.com/docs) for base components (which will later be used in the form I'm building for PDF personalization and analytics)
 
 ## Getting Started
 

@@ -1,0 +1,26 @@
+ignores: [
+  "gitmoji-parser-opts",
+  "quick-lint-js",
+  "pretty-quick",
+  "@semantic-release/changelog",
+  "@semantic-release/git",
+  "@semantic-release/github",
+  "@semantic-release/npm",
+  "@semantic-release/release-notes-generator",
+  "commitlint",
+  "commitlint-config-gitmoji",
+  "conventional-changelog-gitmoji-config",
+  "semantic-release-config-gitmoji",
+  "semantic-release-gitmoji",
+  "@next/bundle-analyzer",
+  "@storybook/*",
+  "storybook*",
+  "eslint*",
+  "@chromatic-com/storybook",
+  "autoprefixer",
+  "postcss-import",
+  "jest-environment-jsdom",
+  "src",
+  "@/*"
+]
+quiet: true

@@ -1,0 +1,39 @@
+{{#if compareUrl}}
+  # [v{{nextRelease.version}}]({{compareUrl}}) ({{datetime "UTC:yyyy-mm-dd"}})
+{{else}}
+  # v{{nextRelease.version}} ({{datetime "UTC:yyyy-mm-dd"}})
+{{/if}}
+
+{{#with commits}}
+  {{#if boom}}
+    ## 💥 Breaking changes
+    {{#each boom}}
+      - {{> commitTemplate}}
+    {{/each}}
+  {{/if}}
+
+  {{#if sparkles}}
+    ## ✨ New Features
+    {{#each sparkles}}
+      - {{> commitTemplate}}
+    {{/each}}
+  {{/if}}
+
+  {{#if ambulance or hotfix}}
+    ## 🔧 Fixes
+
+    {{#if ambulance}}
+      ### 🚑 Critical Issues
+      {{#each ambulance}}
+        - {{> commitTemplate}}
+      {{/each}}
+    {{/if}}
+
+    {{#if hotfix}}
+      ### 🐛 Resolved Bugs
+      {{#each hotfix}}
+        - {{> commitTemplate}}
+      {{/each}}
+    {{/if}}
+  {{/if}}
+{{/with}}

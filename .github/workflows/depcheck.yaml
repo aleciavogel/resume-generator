@@ -1,0 +1,29 @@
+name: 🔍🔗 Dependency Check CI
+on:
+  workflow_call:
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    # Set a reasonable timeout, 120x shorter than GitHub's default 6 hours
+    timeout-minutes: 5
+    strategy:
+      matrix:
+        node: [22]
+    name: 🔍🔗🔢 Run DepCheck with Node.js Version ${{ matrix.node }}
+    steps:
+      - name: 📂 Check out Git repository
+        uses: actions/checkout@v4
+
+      - name: 🛠️ Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: 🛠️ Set-up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+
+      - name: 🔍🔗 Check Project Unused Dependencies
+        run: pnpm depcheck:ci

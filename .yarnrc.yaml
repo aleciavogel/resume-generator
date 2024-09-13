@@ -1,8 +1,0 @@
-npmRegistries:
-  //npm.fontawesome.com:
-    npmAlwaysAuth: true
-    npmAuthToken: F18C55F5-1370-43BE-B832-E38241644F5F
-
-npmScopes:
-  fortawesome:
-    npmRegistryServer: https://npm.fontawesome.com/
