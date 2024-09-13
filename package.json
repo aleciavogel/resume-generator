@@ -228,7 +228,7 @@
     "eslint-config-next": "^14.2.11",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "gitmoji-parser-opts": "1.0.0",
-    "gzip-size": "7.0.0",
+    "gzip-size": "6.0.0",
     "husky": "9.1.6",
     "license-checker": "25.0.1",
     "lint-staged": "15.2.10",
