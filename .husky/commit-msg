@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
-echo "$1" #this is optional
-cat .git/COMMIT_EDITMSG
+#echo "$1" #this is optional
+#cat .git/COMMIT_EDITMSG
 npx commitlint --edit "$1"
