@@ -39,8 +39,7 @@ const ResumeFrontPage: FC = () => {
               ...{ fontFamily: 'Helvetica-Bold', lineHeight: 1.25 },
             }}
           >
-            — Senior Full-Stack Developer, Product Designer,{'\n'} UX Strategist, and Content
-            Creator.
+            — Senior Full-Stack Developer
           </Text>
         </View>
 
@@ -78,7 +77,7 @@ const ResumeFrontPage: FC = () => {
             <Text style={tw('mr-2')}>&#x2022;</Text>
             <Text>
               Experience with cutting-edge tech such as {'\n'}
-              NextJS, Supabase, Firebase, and Electron.
+              NextJS, Prisma, Pinecone, and OpenAI.
             </Text>
           </View>
           <View style={tw('flex flex-row text-white text-base')}>

@@ -13,7 +13,7 @@
     "dep:update:skip": "npx upgradeps -u -s",
     "depcheck": "npx depcheck | grep -v '^* #' | xargs",
     "depcheck:ci": "echo NOTE: If this errors out please consider removing dependencies from package.json or adding them to the .depcheckrc 'ignores' array && npx depcheck",
-    "dev": "next dev",
+    "dev": "next dev --experimental-https --port 3000",
     "format": "sort-package-json && pnpm prettier --write . --cache --cache-strategy metadata --log-level log | grep -v \"unchanged\" | xargs",
     "format:git:modified": "pnpm prettier --write $(git diff --name-only --diff-filter d | grep '.ts$' | xargs)",
     "git:added": "git diff --cached --name-only --diff-filter=A",

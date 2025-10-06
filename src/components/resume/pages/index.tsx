@@ -6,12 +6,11 @@ import ResumePageTwo from './page-2'
 import ResumePageThree from './page-3'
 import ResumePageFour from './page-4'
 import ResumePageFive from './page-5'
-import ResumeLastPage from './page-6'
 
 const ResumeDocument: FC = () => {
   return (
     <Document title="Alecia Vogel - Resume">
-      <ResumeFrontPage />
+      {/*<ResumeFrontPage />*/}
 
       <ResumePageTwo />
 
@@ -20,8 +19,6 @@ const ResumeDocument: FC = () => {
       <ResumePageFour />
 
       <ResumePageFive />
-
-      <ResumeLastPage />
     </Document>
   )
 }

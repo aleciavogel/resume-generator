@@ -114,17 +114,27 @@ export const styles = StyleSheet.create({
 
 export const WORK_EXPERIENCES: ExperienceItem[] = [
   {
+    title: 'Freelance Full Stack Developer',
+    company: 'Self-Employed',
+    location: 'Remote',
+    dateRange: 'Sep 2024 – Present',
+    description: [
+      'Designed and developed a luxury product notification app, enabling users to receive real-time alerts for exclusive item drops and restocks across various retailers.',
+      'Built an e-commerce web application focused on gifting experiences, integrating intuitive UX, secure payment processing, and an admin dashboard for managing offerings and bookings.',
+      'Collaborated with clients to define project requirements, wireframes, and deployment strategies, delivering production-ready solutions tailored to business goals.',
+    ],
+    skills: ['TypeScript', 'ReactJS', 'NextJS', 'NodeJS', 'Prisma', 'Postgres', 'Stripe', 'Git'],
+  },
+  {
     title: 'Senior Full Stack Developer',
     company: 'Playable',
     location: 'Sydney, NSW [Remote]',
     dateRange: 'Oct 2023 - July 2024',
     description: [
       'Developed a Turborepo app that generates mobile app prototypes for iOS and Android, facilitating client demonstrations and feedback.',
-      'Led the transition of legacy products from jQuery and Python 2 to modern technologies like ReactJS and Node, ensuring industry-standard practices and future-proofing applications.',
+      'Led the transition of legacy products from jQuery and Python 2 to modern technologies like ReactJS and Node.',
       'Established and maintained a robust continuous integration (CI) workflow, enhancing development efficiency and reliability.',
-      'Automated the development environment setup, eliminating the need for deployments to see changes and significantly improving developer productivity.',
-      'Developed and published a GitHub Action to deploy Turborepo Next.js apps to Google App Engine, contributing to the open-source community and streamlining deployment processes.',
-      'Initiated the consolidation of multiple apps into a monorepo, including the addition of Storybook for ReactJS component documentation and several new JavaScript packages for features and components shared between apps.',
+      'Developed and published a GitHub Action to deploy Turborepo Next.js apps to Google App Engine.',
       'Mentored junior team members, providing guidance and support in their professional development.',
     ],
     skills: [
@@ -149,8 +159,6 @@ export const WORK_EXPERIENCES: ExperienceItem[] = [
     description: [
       'Customized SCORM package code to meet client needs, converted SCORM packages into mobile apps and executable software for offline access, and ensured compliance with W3C Accessibility guidelines.',
       'Transcribed a digital textbook built with rbook into an interactive Moodle Book module for a post-graduate finance course at the University of Alberta.',
-      'Conducted client-facing demos and presentations, simplifying intricate software functionalities to ensure client understanding and promote effective usage.',
-      "Co-led Onlea's first Google Design Sprint, resulting in a rapid prototype for an enhanced internal QA process.",
       'Experimented with photogrammetry techniques to bring cultural education to life in an e-learning setting. Captured multiple-angle photographs of a Métis artefact and successfully converted it into an interactive 3D model.',
     ],
     skills: [
@@ -189,10 +197,8 @@ export const WORK_EXPERIENCES_CONTINUED: ExperienceItem[] = [
     description: [
       "Led the front-end development of a $1.2M socioeconomic project and built a data visualization platform powered by machine learning for the Alberta Government's Ministry of Labour.",
       'Conducted a specialized workshop for PhD candidates at the University of Alberta, providing in-depth instruction on leveraging Docker for Data Science projects.',
-      'Consulted with the Communications team on the redesign and rebranding of the Cybera website.',
       "Executed a total code overhaul for Cybera's timesheet app, enhancing code readability, maintainability, and scalability.",
       'Collaborated with the Data Science team to develop, maintain, and support software applications to analyze large amounts of data.',
-      'Facilitated usability tests to quantify and improve the user experience of proprietary Data Science tools.',
     ],
     skills: [
       'TypeScript',
@@ -335,8 +341,10 @@ export const SKILLS: Skills = {
   'Frontend Frameworks': ['ReactJS', 'React Native', 'NextJS', 'GatsbyJS', 'ThreeJS'],
   Databases: [
     'Supabase',
-    'PostgreSQL',
+    'Postgres',
+    'Prisma',
     'Firebase',
+    'MongoDB',
     'Neo4J',
     'MySQL',
     'GraphQL',
